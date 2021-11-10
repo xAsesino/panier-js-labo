@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lobster", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: silver;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: space-between;
+  background: #2F5075;
+}
+
+.brand-title {
+  font-size: 30px;
+  margin: 0 10px;
+  color: whitesmoke;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-decoration: none;
+}
+.brand-title:hover {
+  color: black;
+  text-shadow: -1px 0 wheat, 0 4px wheat, 1px 0 wheat, 0 -1px wheat;
+}
+
+.navbar-links ul {
+  display: flex;
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: whitesmoke;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding: 1rem;
+  display: block;
+  border-radius: 20%;
+}
+.navbar-links li a:hover {
+  background: grey;
+  color: black;
+  text-shadow: -1px 0 wheat, 0 4px wheat, 1px 0 wheat, 0 -1px wheat;
+}
+
+.navbar-links li a img {
+  width: 30px;
+  height: 20px;
+}
+.navbar-links li a img:hover {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+@media only screen and (max-width:600px) {
+  .navbar-links {
+    width: 100%;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    width: 60px;
+  }
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.goku img {
+  position: fixed;
+  margin: 0 auto;
+  animation: animateGoku 30s linear infinite;
+}
+
+@keyframes animateGoku {
+  0% {
+    transform: translateX(-1300px);
+  }
+  100% {
+    transform: translateX(1000px);
+  }
+}
+.title h1, .title-perso h2 {
+  font-size: 80px;
+  color: wheat;
+  text-shadow: -1px 0 black, 0 4px black, 1px 0 black, 0 -1px black;
+  padding-bottom: 30px;
+  transition: 0.5s;
+}
+
+.about, .about-poster {
+  padding: 35px;
+}
+
+.about p, .about-poster p {
+  font-size: 25px;
+  color: black;
+  text-shadow: -1px 0 wheat, 0 4px wheat, 1px 0 wheat, 0 -1px wheat;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.container .card {
+  position: relative;
+  max-width: 300px;
+  height: 400px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  background: wheat;
+  box-shadow: 0 0 20px black, 0 0 40px black;
+  transition: 0.5s ease-in-out;
+}
+.container .card:hover {
+  height: 600px;
+}
+
+.container .card .imgbx {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 8px;
+}
+
+.container .card .imgbx img {
+  width: 100%;
+  border-radius: 20%;
+  margin: 0 auto;
+  border: 3px solid wheat;
+  box-shadow: 0 0 20px black, 0 0 40px black;
+  cursor: pointer;
+}
+
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 100px;
+  transition-delay: 0.3s;
+}
+
+.container #black {
+  color: whitesmoke;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 35px;
+}
+
+.container-2 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.container-2 .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  background: wheat;
+  box-shadow: 0 0 20px black, 0 0 40px black;
+  transition: 0.5s ease-in-out;
+}
+.container-2 .card:hover {
+  width: 900px;
+}
+
+.container-2 .card .imgbx {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 8px;
+}
+
+.container-2 .card .imgbx img {
+  width: 100%;
+  border-radius: 20%;
+  margin: 0 auto;
+  border: 3px solid wheat;
+  box-shadow: 0 0 20px black, 0 0 40px black;
+}
+
+.container-2 .card .content {
+  position: relative;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+.container-2 .card .content h3 {
+  margin-top: -150px;
+}
+
+.container-2 .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-left: 300px;
+  transition-delay: 0.3s;
+}
+
+.container-2 #black {
+  color: whitesmoke;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 35px;
+}
+
+.sociaux {
+  width: 20%;
+  margin: 50px;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  animation: animateSociaux 4s linear forwards;
+}
+
+@keyframes animateSociaux {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.sociaux ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.sociaux ul li {
+  transition: 0.5s;
+}
+.sociaux ul li:hover {
+  -o-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+@media only screen and (max-width:600px) {
+  .sociaux {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=poster.css.map */

@@ -1,0 +1,224 @@
+@import "../mixins/_display-flex.scss";
+@import "../mixins/_text-colors.scss";
+@import "../../functions/_mobile-text.scss";
+
+section{
+    @include displayflexcenter;
+    flex-direction: column;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.goku img{
+    position: fixed;
+    margin: 0 auto;
+    animation: animateGoku 30s linear infinite;
+}
+
+@keyframes animateGoku{
+    0%{
+        transform: translateX(-1300px);
+    }
+    100%{
+        transform: translateX(1000px);
+    }
+}
+
+.title h1, .title-perso h2{
+    font-size: 80px;
+    @include black-wheat-title;
+    padding-bottom: 30px;
+    transition: 0.5s;
+}
+
+.about, .about-poster{
+    padding: 35px;
+}
+
+.about p, .about-poster p {
+    font-size: 25px;
+    @include wheat-black-about;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    @include displayflexcenter;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.container .card{
+    position: relative;
+    max-width: 300px;
+    height: 400px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    background: wheat;
+    box-shadow: 0 0 20px black, 0 0 40px black;
+    transition: 0.5s ease-in-out;
+
+    &:hover{
+        height: 600px;
+    }
+}
+
+.container .card .imgbx{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 8px;
+}
+
+.container .card .imgbx img{
+    width: 100%;
+    border-radius: 20%;
+    margin: 0 auto;
+    border: 3px solid wheat;
+    box-shadow: 0 0 20px black, 0 0 40px black;
+    cursor: pointer;
+}
+
+.container .card .content{
+    position: relative;
+    margin-top: -140px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 100px;
+    transition-delay: 0.3s;
+}
+
+.container #black{
+    @include whitesmoke-black;
+    font-size: 35px;
+}
+
+
+// Container 2
+
+.container-2{
+    position: relative;
+    width: 100%;
+    @include displayflexcenter;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.container-2 .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    background: wheat;
+    box-shadow: 0 0 20px black, 0 0 40px black;
+    transition: 0.5s ease-in-out;
+
+    &:hover{
+        width: 900px;
+    }
+}
+
+.container-2 .card .imgbx{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 8px;
+}
+
+.container-2 .card .imgbx img{
+    width: 100%;
+    border-radius: 20%;
+    margin: 0 auto;
+    border: 3px solid wheat;
+    box-shadow: 0 0 20px black, 0 0 40px black;
+}
+
+.container-2 .card .content{
+    position: relative;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+.container-2 .card .content h3{
+    margin-top: -150px;
+}
+
+.container-2 .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-left: 300px;
+    transition-delay: 0.3s;
+}
+
+.container-2 #black{
+    @include whitesmoke-black;
+    font-size: 35px;
+}
+.sociaux{
+    width: 20%;
+    margin: 50px;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    animation: animateSociaux 4s linear forwards;
+}
+
+@keyframes animateSociaux {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+
+    }
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.sociaux ul{
+    text-decoration: none;
+    list-style: none;
+    @include displayflexcenter;
+    justify-content: space-evenly;
+}
+
+.sociaux ul li{
+    transition: 0.5s;
+    &:hover{
+        -o-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        transition: 0.5s;
+    }
+}
+
+@media #{$mobile-width}{
+    .sociaux{
+        width: 50%;
+    }
+}

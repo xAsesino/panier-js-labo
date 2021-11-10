@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(192, 192, 192);
+}
+
+@import "_header/_header-navbar.scss";
+@import "_section/_section-main.scss";

@@ -1,0 +1,54 @@
+@import "../mixins/_display-flex.scss";
+@import "../mixins/_text-colors.scss";
+@import "../../functions/_mobile-text.scss";
+
+section{
+    @include displayflexcenter;
+    width: 100%;
+    min-height: 80vh; 
+    font-size: large;
+}
+
+.products{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.products .product{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product img{
+    width: 120px;
+    border-radius: 20%;
+    margin: 0 auto;
+    border: 3px solid wheat;
+    box-shadow: 0 0 20px black, 0 0 40px black;
+}
+
+.product ion-icon{
+    cursor: pointer;
+}
+
+.postertotaltitle{
+    position: absolute;
+    right: 350px;
+}
+
+.totalposter{
+    position: absolute;
+    right: 270px;
+}
+
+.btndel, .btnadd{
+    width: 100px;
+    border-radius: 10px;
+}

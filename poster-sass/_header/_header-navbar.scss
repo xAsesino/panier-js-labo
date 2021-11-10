@@ -1,0 +1,71 @@
+@import "../mixins/_display-flex.scss";
+@import "../mixins/_text-colors.scss";
+@import "../../functions/_mobile-text.scss";
+
+// Header - NavBar
+
+.navbar{
+    @include displayflexcenter;
+    justify-content: space-between;
+    background: #2F5075;
+}
+
+.brand-title{
+    font-size: 30px;
+    margin: 0 10px;
+    @include whitesmoke-black();
+    text-decoration: none;
+
+    &:hover{
+        @include wheat-black-about;
+    }
+}
+
+.navbar-links ul{
+    display: flex;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    @include whitesmoke-black();
+    padding: 1rem;
+    display: block;
+    border-radius: 20%;
+
+    &:hover{
+        background: grey;
+        @include wheat-black-about;
+    }
+}
+
+.navbar-links li a img{
+    width: 30px;
+    height: 20px;
+
+    &:hover{
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+    }
+}
+
+// NavBar Mobile
+
+@media #{$mobile-width}{
+    .navbar-links{
+        width: 100%;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a{
+        padding: .5rem 1rem;
+        border-radius: 0;
+        width: 60px;
+    }
+}
